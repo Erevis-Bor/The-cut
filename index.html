@@ -10,6 +10,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
   <script src="data.js" defer></script>
+  <script src="metadata.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -18,14 +19,14 @@
       <a class="brand" href="#home" aria-label="The Cut home"><div class="brand-mark"><span class="brand-notch"></span></div><span>THE CUT<small>YOUR PERSONAL CINEMA</small></span></a>
       <div class="side-label">EXPLORE</div>
       <nav id="desktopNav" aria-label="Primary navigation">
-        <button data-view="home" class="nav-item active"><span class="nav-icon">◈</span> Home</button>
-        <button data-view="discover" class="nav-item"><span class="nav-icon">▤</span> Discover</button>
-        <button data-view="library" class="nav-item"><span class="nav-icon">▦</span> My library</button>
-        <button data-view="taste" class="nav-item"><span class="nav-icon">◉</span> My taste</button>
+        <button data-view="home" class="nav-item active"><span class="nav-icon">⌂</span> Home</button>
+        <button data-view="discover" class="nav-item"><span class="nav-icon">⌕</span> Discover</button>
+        <button data-view="library" class="nav-item"><span class="nav-icon">▣</span> My library</button>
+        <button data-view="taste" class="nav-item"><span class="nav-icon">◎</span> My taste</button>
       </nav>
       <div class="side-spacer"></div>
       <div class="sidebar-foot">
-        <div class="foot-squiggle">✳</div>
+        <div class="foot-squiggle">THE CUT /</div>
         <strong>Made for your taste.</strong>
         <span>Not another infinite scroll.</span>
         <button class="linkish" data-action="open-export">Export & back up ↗</button>
@@ -33,15 +34,15 @@
       <div class="side-version">THE CUT / 01 — PRIVATE EDITION</div>
     </aside>
     <main class="main">
-      <header class="topbar"><div class="breadcrumb"><span class="crumb-logo">THE CUT</span><span class="crumb-divider">/</span><span id="crumbLabel">Tonight</span></div><div class="top-controls"><span class="offline-tag"><span class="online-dot"></span><span id="storageLabel">Saved on this device</span></span><button class="icon-btn" data-action="open-search" aria-label="Search titles">⌕</button><button class="avatar-btn" data-view="taste" title="Taste profile">G</button></div></header>
+      <header class="topbar"><div class="breadcrumb"><span class="crumb-logo">THE CUT</span><span class="crumb-divider">/</span><span id="crumbLabel">Tonight</span></div><div class="top-controls"><span class="offline-tag"><span class="online-dot"></span><span id="storageLabel">Saved on this device</span></span><button class="icon-btn" data-action="open-search" aria-label="Search titles">⌕</button><button class="avatar-btn" data-view="taste" title="Taste profile">◎</button></div></header>
       <div id="view" class="view" aria-live="polite"></div>
-      <footer class="main-footer"><span>Curated with your taste in mind. Your data lives on this device.</span><span>Streaming links: JustWatch UK · Availability not verified in app</span></footer>
+      <footer class="main-footer"><span>Curated with your taste in mind. Your data lives on this device.</span><span>Availability: JustWatch / TMDB UK · Check dates and individual seasons</span></footer>
     </main>
     <nav class="mobile-nav" aria-label="Mobile navigation">
-      <button data-view="home" class="active"><span>◈</span>Home</button>
-      <button data-view="discover"><span>▤</span>Discover</button>
-      <button data-view="library"><span>▦</span>Library</button>
-      <button data-view="taste"><span>◉</span>My taste</button>
+      <button data-view="home" class="active"><span>⌂</span>Home</button>
+      <button data-view="discover"><span>⌕</span>Discover</button>
+      <button data-view="library"><span>▣</span>Library</button>
+      <button data-view="taste"><span>◎</span>My taste</button>
     </nav>
   </div>
   <div id="overlay" class="overlay-root"></div>

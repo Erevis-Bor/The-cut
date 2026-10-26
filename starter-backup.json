@@ -1,9 +1,9 @@
 {
   "app": "The Cut",
-  "version": 2,
-  "exportedAt": "2026-10-25",
+  "version": 3,
+  "exportedAt": "2026-10-26T05:04:23.686Z",
   "profile": {
-    "summary": "Strong comic writing and sharp institutional satire; emotionally rewarding journeys and friendships; gripping fictional mystery with satisfying narrative stakes; highly original premises are welcome but not sufficient; enjoys deep psychological atmosphere and strong character work. Mood changes greatly each evening; exclude true crime. Likes, alright and loved ratings are separate signals; did not finish or stopped is not the same as disliked.",
+    "summary": "Updated 26 October 2026 from 152 personally tracked titles (15 unwatched). Core preferences: comedy must actually make you laugh; particularly loves The Inbetweeners, Community, Arrested Development, It's Always Sunny, The Thick of It, Four Lions, Nathan for You and I Think You Should Leave, but merely finds Monty Python, Hot Fuzz and Airplane! alright, and dislikes Aunty Donna. Do not infer that all absurd, British or popular comedy will land. Strong appetite for sharply written satire and institutional stupidity; emotionally rewarding films about connection, friendship, adventure and self-discovery; compelling fictional crime and tension (Top Boy, Squid Game), distinct from disliked true crime. Loves ambitious, unusual, serialised genre stories when they have genuine narrative payoff (Severance, Maniac, Legion, WandaVision, Loki, The Matrix, Everything Everywhere All at Once). Originality and prestige alone do not guarantee enjoyment (Donnie Darko disliked, Inception liked, Pluribus dropped). Loves supernatural psychological horror with engaging mystery (Hill House, Bly Manor, Fall of the House of Usher, The Others); Midnight Mass failed because the horror/mystery didn't grip. Enjoys personality-led easy entertainment and panel shows (QI, Big Fat Quiz, 8 Out of 10 Cats Does Countdown, Clarkson's Farm), not just scripted sitcoms. Likes warm, earned emotion (Shrinking, Ted Lasso, The Intouchables, Walter Mitty, The Peanut Butter Falcon). Broad overall taste, but comedy execution, interesting storytelling and earned payoff matter more than genre or acclaim. Mood changes dramatically by evening. Watch statuses are distinct from ratings: dropped does not necessarily mean disliked; Shōgun was alright and might merit a second chance. Keep all comments, existing statuses and 15 unwatched titles intact. Never assume catalogue means watched or that a TV series was completed. Subscribed in UK to Netflix, Prime Video, Disney+, NOW, BBC iPlayer and Apple TV.",
     "additionalNotes": ""
   },
   "providers": [
@@ -1058,6 +1058,330 @@
       "progress": "",
       "updated": null,
       "source": "conversation"
+    },
+    "film-i-love-you-phillip-morris": {
+      "status": "watched",
+      "rating": "like",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "film-the-fundamentals-of-caring": {
+      "status": "watched",
+      "rating": "like",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "film-the-inbetweeners-movie": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "film-shaun-of-the-dead": {
+      "status": "watched",
+      "rating": "okay",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "film-hot-fuzz": {
+      "status": "watched",
+      "rating": "okay",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "film-napoleon-dynamite": {
+      "status": "watched",
+      "rating": "like",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "film-nacho-libre": {
+      "status": "watched",
+      "rating": "dislike",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "film-airplane": {
+      "status": "watched",
+      "rating": "okay",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "film-monty-python-and-the-holy-grail": {
+      "status": "watched",
+      "rating": "okay",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "film-monty-python-s-life-of-brian": {
+      "status": "watched",
+      "rating": "okay",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "film-the-ballad-of-buster-scruggs": {
+      "status": "watched",
+      "rating": "like",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "film-free-solo": {
+      "status": "watched",
+      "rating": "like",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-friday-night-dinner": {
+      "status": "watched",
+      "rating": "okay",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-the-inbetweeners": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-fresh-meat": {
+      "status": "watched",
+      "rating": "like",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-the-it-crowd": {
+      "status": "watched",
+      "rating": "like",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-top-boy": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-space-force": {
+      "status": "watched",
+      "rating": "okay",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-futurama": {
+      "status": "watched",
+      "rating": "like",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-rick-and-morty": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-legion": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-wandavision": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-moon-knight": {
+      "status": "watched",
+      "rating": "okay",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-werewolf-by-night": {
+      "status": "watched",
+      "rating": "dislike",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-daredevil": {
+      "status": "watched",
+      "rating": "like",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-the-haunting-of-bly-manor": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-the-fall-of-the-house-of-usher": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-squid-game": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-would-i-lie-to-you": {
+      "status": "watched",
+      "rating": "like",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-8-out-of-10-cats-does-countdown": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-the-big-fat-quiz-of-the-year": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-qi": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-clarkson-s-farm": {
+      "status": "watched",
+      "rating": "love",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-misfits": {
+      "status": "dropped",
+      "rating": "okay",
+      "note": "",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-shogun": {
+      "status": "dropped",
+      "rating": "okay",
+      "note": "Just didn’t grab me but maybe needs a second chance",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
+    },
+    "tv-aunty-donna-s-big-ol-house-of-fun": {
+      "status": "dropped",
+      "rating": "dislike",
+      "note": "Just not funny",
+      "reason": "",
+      "progress": "",
+      "source": "conversation",
+      "updated": null
     }
   },
   "customTitles": [],
@@ -16753,10 +17077,11 @@
   "stats": {
     "titles": 857,
     "rated": 90,
-    "watched": 55,
+    "watched": 88,
     "seen": 26,
     "sampled": 6,
     "wantToWatch": 15
   },
-  "storage": "local-first"
+  "storage": "local-first",
+  "historyRevision": 3
 }

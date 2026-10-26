@@ -1,85 +1,50 @@
-# THE CUT — Your personal cinema
+# The Cut v4 — personal film & TV discovery
 
-A mobile-first, private film and TV discovery app, built for your particular taste.
+857 curated titles with unique synopses and personal justifications; 152 initial viewing records; ratings, comments, progress, full backups and ChatGPT-ready exports.
 
-## Start in 30 seconds
+## What's new
 
-### Option A: open the single HTML file
+- **One-tap Seen and Save** on every discovery card, with Undo. Tap Details for ratings, comments and season progress. Viewed titles leave Discover immediately (unless Hide seen & skipped is off).
+- **Bulk mode**: Select multiple titles, then mark them seen in one action.
+- **Cleaner mobile Discover**: search and curated routes first; extra filters are tucked behind Filters. No decorative star/green emoji.
+- **Streaming information**: the card and details show subscription inclusion when UK offers have actually been checked. Never counts Prime/Amazon rentals or Apple rentals as included. All titles link to JustWatch UK for manual checking. A "Included on my subscriptions" filter unlocks once verified data is loaded.
+- **Posters**: real TMDB posters show where an approved metadata snapshot provides them, with a well-designed typographic fallback otherwise.
+- **Backward compatibility**: uses the original `the-cut-state-v1` browser storage key; no watch history, comments or status migrations are discarded.
 
-Open **THE-CUT-standalone.html** in a full browser. It contains the design, scripts and complete catalogue in one file. This is the quickest way to try the app.
+## Install on GitHub Pages
 
-**Important:** some mobile file-preview apps block JavaScript or don't retain local storage between openings. For regular use, hosting it on GitHub Pages (below) is much more dependable.
+1. Unzip and upload all project files, including hidden `.github/workflows/` and `scripts/`, to the root of your GitHub repository.
+2. In GitHub, open **Settings → Pages** and select **Deploy from a branch**, `main`, `/ (root)`.
+3. Open the HTTPS Pages URL, then add it to your iPhone Home Screen if desired.
+4. **Export Full Backup (.json)** before upgrading an existing deployment. The app preserves local records on the same domain and browser. Import a backup when changing domains or devices.
 
-### Option B: GitHub Pages (recommended for everyday use)
+Or open `THE-CUT-v4-standalone.html` in a normal desktop browser. Note that local `file://` browser storage support varies; hosting on GitHub Pages is more reliable and essential for automatic streaming updates.
 
-1. Create a new GitHub repository, for example `the-cut`.
-2. Upload `index.html`, `app.js`, `data.js`, `styles.css`, `manifest.webmanifest`, `sw.js` and the `assets/` folder to the **root** of the repository. (Do not upload only the ZIP.)
-3. In repository **Settings → Pages**, select **Deploy from a branch**, branch **main**, folder **/(root)**, and save.
-4. Open the `https://YOUR-USERNAME.github.io/the-cut/` address GitHub shows. On your iPhone, use Safari's Share menu → **Add to Home Screen**.
+## Set up verified UK streaming availability
 
-The installable web app caches its code and catalogue for use offline after its first successful load.
+To avoid presenting invented availability for 857 titles, The Cut ships with an **empty, honest** availability snapshot. All titles still have working *Check on JustWatch* links.
 
-## What's inside
+To populate cards with subscription providers, accurate TMDB posters and dated streaming data:
 
-- **857 curated titles:** 498 films and 359 TV programmes, each with its own short synopsis and a individually written, personalised justification. A small number are negative preference references, clearly flagged.
-- Discover defaults to excluding previously seen, sampled, dropped and abandoned titles, with an opt-in Show History control. The larger catalogue uses 36-at-a-time pagination, shuffle discovery and a 510-title Under the Radar route. Discover defaults to excluding previously seen, sampled, dropped and abandoned titles, with an opt-in Show History control. The larger catalogue uses 36-at-a-time pagination, shuffle discovery and a 510-title Under the Radar route. Discover defaults to excluding previously seen, sampled, dropped and abandoned titles, with an opt-in Show History control. The larger catalogue uses 36-at-a-time pagination, shuffle discovery and a 510-title Under the Radar route. Separate Film and TV exploration, genre / mood / collection filters, full-text search, favourites and essential / wildcard categories.
-- A three-choice **Tonight** picker using your mood, preferred effort, format and company.
-- A genuine personal **Library**, separate from the larger discovery catalogue.
-- Statuses for *Want to watch, Watching, Watched / finished, Seen (completion unknown), Sampled / tried, Paused, Dropped, Not continuing, Not interested*.
-- Ratings: *Loved / Liked / Alright / Disliked / Unrated*.
-- Optional progress and a reason for stopping a show, plus a **free-text private comment on every title**. Add unlimited context about why something worked or didn't.
-- Ability to add any missing film or show, and edit its synopsis / reason.
-- Simple taste-aware ranking that adjusts to your ratings. This happens in your browser, not via an external AI service.
-- Subscription preferences for Netflix, Prime Video, Disney+, NOW, BBC iPlayer and Apple TV.
+1. Apply for a free personal / non-commercial TMDB API read access token: https://www.themoviedb.org/settings/api . TMDB requires attribution and its terms apply.
+2. In your GitHub repository, go to **Settings → Secrets and variables → Actions → New repository secret**, named **`TMDB_READ_TOKEN`**, and paste the *API Read Access Token*.
+3. Go to **Actions → Refresh UK streaming listings → Run workflow**. The job checks the entire catalogue and commits `metadata.js`. It runs again each Sunday by default, provided GitHub continues running scheduled workflows for your repository.
+4. Reload your GitHub Pages site once the workflow and Pages redeployment complete. Posters and confirmed provider badges appear; the *Included on my subscriptions* filter becomes available.
 
-## Your preloaded viewing history
+The token **never goes into the web page** or downloaded snapshots; only GitHub Actions uses it. Alternatively run `TMDB_READ_TOKEN=... python scripts/sync_tmdb.py` locally. Do not commit or share your API token.
 
-We have preloaded all 115 explicit records from your 25 October 2026 viewing update, plus The French Dispatch as a seen-but-unrated film based on your Fantastic Mr. Fox comment, including your 55 finished/watched, 25 seen (completion unknown), 6 sampled, 8 dropped, 6 not continuing and 15 unwatched shortlist items. BoJack Horseman is now **Dropped**, Slow Horses **Not continuing**, and Fargo **Not continuing (season one complete)**, exactly as in that update. Your comments and ratings are preserved.
+**Precise interpretation:** `flatrate` means subscription availability. `rent` and `buy` offers do not qualify. Standalone Amazon/Apple rentals are excluded. Apple TV TMDB provider 350 is the subscription, NOT Apple TV Store ID 2. NOW movies/entertainment depend on membership; unless the entitlement is known, the app displays **"Listed on NOW · membership depends"**, not confirmed free viewing. TV series can have differing seasonal availability; check before watching. Providers may vary by ad-supported tier. Snapshots over 30 days old cease to count as confirmed inclusion.
 
-We **do not assume** that enjoying a TV programme means you finished every season; those are saved as **Seen (completion unknown)** unless you confirmed otherwise. That distinction is preserved in exports.
+TMDB provides the film and TV metadata and watch-provider feed (powered by JustWatch). **The Cut is not endorsed or certified by TMDB or JustWatch**. Attribution in the app and the provider data source applies.
 
-## Export your data to ChatGPT
+## Your data and privacy
 
-Open **My library → Export data**, or **My taste → Export your profile**, or use **Export & back up** on desktop.
+- The Cut stores viewing status, ratings, notes, progress, bookmarks and preferences in this browser's `localStorage`. It has no accounts and does not share your viewing history.
+- **My library → Export data → ChatGPT update (.md)** makes a readable export with all tracked records and comments. Paste it into ChatGPT to update your profile.
+- **Full data backup (.json)** preserves your personal records, custom titles and catalogue, for import on another browser/device.
+- Your personal data is separate from streaming metadata and recommendation listings.
+- The initial recommendations are editorial/rule-based, not live AI. Each title contains a bespoke synopsis and personal justification.
 
-- **ChatGPT update (.md)**: a human-readable report of *every title you've rated, watched, sampled, paused, dropped or wishlisted*, plus ratings, season progress, reasons for stopping and your complete comments. Upload the file to ChatGPT or copy its contents using **Copy ChatGPT update**. This is the best format for improving your recommendations.
-- **Full data backup (.json)**: your records **and** every curated title with synopsis and justification, plus custom titles, profile notes, streaming preferences and timestamps. This is the definitive backup and can be imported later.
-- **Import previous backup**: imports a prior `the-cut-full-backup-*.json` and merges those records into the current app. Your other local records aren't wiped just because they aren't present in the imported file.
+## Technical notes
 
-If you use two devices, export on one, import on the other. There is no automatic cross-device synchronisation in this version.
-
-**Make backups** periodically. All records are stored in the browser's `localStorage`; clearing site data or using an unstable private/file preview can erase local changes.
-
-## Where to watch
-
-Each title includes **Where to watch in the UK**, which opens a JustWatch search. JustWatch can show current provider offers. The app does **not** call a live streaming API, so it does **not** claim that a title is currently included in any of your subscriptions or give unverified rental prices. This would require a reliable licensed or authenticated availability feed.
-
-## Poster imagery and privacy
-
-The design uses distinctive, procedurally styled typographic covers rather than externally hotlinked copyrighted posters. No tracking pixels, login, analytics, account, server database or paid API keys.
-
-For an ongoing personal app, use the GitHub Pages build and keep a copy of the JSON export. Everything can be rebuilt or migrated from that file.
-
-## Updating an existing deployment
-
-Upload all v2 files, not just `index.html`, and reload the site. The service-worker cache has a new version to avoid stale catalogue files. Your existing on-device viewing records are preserved by the original storage key. If you previously used the single-file app on another URL/device, import its latest JSON backup.
-
-## Curation methodology
-
-The library is manually composed from film/TV knowledge and a broader canon/deep-cut selection, not a live streaming index. Reasons explain possible appeal based on the viewing profile; they are recommendations, not guaranteed personal fits. Some titles are challenging wildcards, and public streaming availability is not asserted.
-
-## Updating an existing deployment
-
-Upload all v2 files, not just `index.html`, and reload the site. The service-worker cache has a new version to avoid stale catalogue files. Your existing on-device viewing records are preserved by the original storage key. If you previously used the single-file app on another URL/device, import its latest JSON backup.
-
-## Curation methodology
-
-The library is manually composed from film/TV knowledge and a broader canon/deep-cut selection, not a live streaming index. Reasons explain possible appeal based on the viewing profile; they are recommendations, not guaranteed personal fits. Some titles are challenging wildcards, and public streaming availability is not asserted.
-
-## Updating an existing deployment
-
-Upload all v2 files, not just `index.html`, and reload the site. The service-worker cache has a new version to avoid stale catalogue files. Your existing on-device viewing records are preserved by the original storage key. If you previously used the single-file app on another URL/device, import its latest JSON backup.
-
-## Curation methodology
-
-The library is manually composed from film/TV knowledge and a broader canon/deep-cut selection, not a live streaming index. Reasons explain possible appeal based on the viewing profile; they are recommendations, not guaranteed personal fits. Some titles are challenging wildcards, and public streaming availability is not asserted.
+Static HTML/CSS/vanilla JS, designed for offline catalogue use. `data.js` holds titles, `app.js` handles interaction, `metadata.js` is optional verified UK provider/poster snapshot. A GitHub Actions workflow securely refreshes metadata; Pages hosts the output. No mandatory npm toolchain or backend.
