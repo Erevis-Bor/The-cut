@@ -1,0 +1,29 @@
+name: Refresh UK streaming listings
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 5 * * 0'
+permissions:
+  contents: write
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch verified GB subscription availability and posters
+        env:
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+        run: python scripts/sync_tmdb.py
+      - name: Commit snapshot when changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add metadata.js
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh UK streaming snapshot'
+            git push
+          fi
