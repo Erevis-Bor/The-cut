@@ -2,3 +2,20 @@
 
 /* The synopsis and personal justification are both visible directly on every list card. */
 .blurb-label{display:block;color:#d8b28b;font-size:9px;font-weight:850;letter-spacing:1px;margin-bottom:3px}.media-why{color:#d0c2b1;font-size:11px;line-height:1.55;margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}.media-why+.media-tags{padding-top:8px}.media-card .media-body{gap:9px}.shelf-scroller .media-why{-webkit-line-clamp:3}@media(max-width:600px){.media-why{font-size:10px;-webkit-line-clamp:3}.media-blurb{font-size:10px}.shelf-scroller .media-why{-webkit-line-clamp:2}}
+/* v2 — large-library discovery controls, accessible at mobile widths */
+.discovery-presets{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
+.discovery-preset{border:1px solid #3b4656;background:#171f29;color:#d1d8e3;border-radius:9px;padding:11px 14px;font-size:12px;font-weight:750;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
+.discovery-preset:hover{border-color:#c7a67b;transform:translateY(-1px)}
+.discovery-preset.active{background:#523c2c;color:#ffe1ab;border-color:#c1955c}
+.discovery-shuffle{margin-left:auto;background:#26323e}
+.discovery-toggle{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:8px 0 18px;background:#19232d;border:1px solid #40505d;border-radius:13px;padding:13px 16px}
+.hide-seen-toggle{display:flex;align-items:center;gap:12px;cursor:pointer}
+.hide-seen-toggle input{width:19px;height:19px;accent-color:#dfa65f;flex:none}
+.hide-seen-toggle span{display:flex;flex-direction:column;gap:3px}
+.hide-seen-toggle strong{font-size:12px;color:#f0ede7}
+.hide-seen-toggle small{font-size:10px;color:#aeb9c8;line-height:1.5}
+.discovery-count{font-size:11px;color:#c4a87e;white-space:nowrap;font-weight:800}
+.load-more-zone{padding:30px 10px 10px;text-align:center}
+.load-more-zone p{color:#9aa7b7;font-size:12px;margin-bottom:13px}
+.load-more-zone .btn{min-width:210px}
+@media(max-width:600px){.discovery-presets{gap:7px}.discovery-preset{font-size:10px;padding:10px 9px}.discovery-shuffle{margin-left:0}.discovery-toggle{padding:11px;align-items:flex-start}.hide-seen-toggle small{font-size:9px}.discovery-count{font-size:9px;margin-top:3px}.load-more-zone{padding-bottom:25px}}

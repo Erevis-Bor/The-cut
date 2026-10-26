@@ -21,8 +21,8 @@ The installable web app caches its code and catalogue for use offline after its 
 
 ## What's inside
 
-- **260 curated titles:** 157 films and 103 TV programmes, each with its own short synopsis and a hand-written, personalised justification. A small number are negative preference references, clearly flagged.
-- Separate Film and TV exploration, genre / mood / collection filters, full-text search, favourites and essential / wildcard categories.
+- **857 curated titles:** 498 films and 359 TV programmes, each with its own short synopsis and a individually written, personalised justification. A small number are negative preference references, clearly flagged.
+- Discover defaults to excluding previously seen, sampled, dropped and abandoned titles, with an opt-in Show History control. The larger catalogue uses 36-at-a-time pagination, shuffle discovery and a 510-title Under the Radar route. Discover defaults to excluding previously seen, sampled, dropped and abandoned titles, with an opt-in Show History control. The larger catalogue uses 36-at-a-time pagination, shuffle discovery and a 510-title Under the Radar route. Discover defaults to excluding previously seen, sampled, dropped and abandoned titles, with an opt-in Show History control. The larger catalogue uses 36-at-a-time pagination, shuffle discovery and a 510-title Under the Radar route. Separate Film and TV exploration, genre / mood / collection filters, full-text search, favourites and essential / wildcard categories.
 - A three-choice **Tonight** picker using your mood, preferred effort, format and company.
 - A genuine personal **Library**, separate from the larger discovery catalogue.
 - Statuses for *Want to watch, Watching, Watched / finished, Seen (completion unknown), Sampled / tried, Paused, Dropped, Not continuing, Not interested*.
@@ -34,7 +34,7 @@ The installable web app caches its code and catalogue for use offline after its 
 
 ## Your preloaded viewing history
 
-We've brought in your explicit reactions, including the ten most recent ratings, your favourite movies and series, the 15 remaining recommendations from the earlier sample, BoJack Horseman and Slow Horses as **Paused**, and Fargo as **Not continuing (season one complete)**.
+We have preloaded all 115 explicit records from your 25 October 2026 viewing update, plus The French Dispatch as a seen-but-unrated film based on your Fantastic Mr. Fox comment, including your 55 finished/watched, 25 seen (completion unknown), 6 sampled, 8 dropped, 6 not continuing and 15 unwatched shortlist items. BoJack Horseman is now **Dropped**, Slow Horses **Not continuing**, and Fargo **Not continuing (season one complete)**, exactly as in that update. Your comments and ratings are preserved.
 
 We **do not assume** that enjoying a TV programme means you finished every season; those are saved as **Seen (completion unknown)** unless you confirmed otherwise. That distinction is preserved in exports.
 
@@ -59,3 +59,27 @@ Each title includes **Where to watch in the UK**, which opens a JustWatch search
 The design uses distinctive, procedurally styled typographic covers rather than externally hotlinked copyrighted posters. No tracking pixels, login, analytics, account, server database or paid API keys.
 
 For an ongoing personal app, use the GitHub Pages build and keep a copy of the JSON export. Everything can be rebuilt or migrated from that file.
+
+## Updating an existing deployment
+
+Upload all v2 files, not just `index.html`, and reload the site. The service-worker cache has a new version to avoid stale catalogue files. Your existing on-device viewing records are preserved by the original storage key. If you previously used the single-file app on another URL/device, import its latest JSON backup.
+
+## Curation methodology
+
+The library is manually composed from film/TV knowledge and a broader canon/deep-cut selection, not a live streaming index. Reasons explain possible appeal based on the viewing profile; they are recommendations, not guaranteed personal fits. Some titles are challenging wildcards, and public streaming availability is not asserted.
+
+## Updating an existing deployment
+
+Upload all v2 files, not just `index.html`, and reload the site. The service-worker cache has a new version to avoid stale catalogue files. Your existing on-device viewing records are preserved by the original storage key. If you previously used the single-file app on another URL/device, import its latest JSON backup.
+
+## Curation methodology
+
+The library is manually composed from film/TV knowledge and a broader canon/deep-cut selection, not a live streaming index. Reasons explain possible appeal based on the viewing profile; they are recommendations, not guaranteed personal fits. Some titles are challenging wildcards, and public streaming availability is not asserted.
+
+## Updating an existing deployment
+
+Upload all v2 files, not just `index.html`, and reload the site. The service-worker cache has a new version to avoid stale catalogue files. Your existing on-device viewing records are preserved by the original storage key. If you previously used the single-file app on another URL/device, import its latest JSON backup.
+
+## Curation methodology
+
+The library is manually composed from film/TV knowledge and a broader canon/deep-cut selection, not a live streaming index. Reasons explain possible appeal based on the viewing profile; they are recommendations, not guaranteed personal fits. Some titles are challenging wildcards, and public streaming availability is not asserted.
