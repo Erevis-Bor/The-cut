@@ -26,7 +26,7 @@ if not (TOKEN or API_KEY):
 
 raw=(ROOT/'data.js').read_text(encoding='utf-8')
 start=raw.index('window.CUT_CATALOGUE=')+len('window.CUT_CATALOGUE=')
-catalogue=json.loads(raw[start:raw.index(';',start)])
+catalogue, _ = json.JSONDecoder().raw_decode(raw[start:].lstrip())
 existing={}
 metadata_path=ROOT/'metadata.js'
 if metadata_path.exists():
